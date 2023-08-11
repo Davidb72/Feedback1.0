@@ -20,6 +20,7 @@
                 <br>
                 <br>
                 <h1 class="title">Feedback</h1>
+                <p>Esta es una evaluación que se realiza para recopilar opiniones y comentarios de las personas sobre el trabajo, servicio o experiencia. Su objetivo principal es obtener información valiosa para mejorar y optimizar lo que se está evaluando. Se utiliza para una retroalimentacion.</p>
                 <button class="download btn btn-dark">Download PDF</button>
                 <form class="row g-3">
                     <div class="col-4">
@@ -75,9 +76,12 @@
                         </div>
                     </div>
                     
-                    <h1 class="title">Competencias organizacionales y actitudinales</h1>
+                    <!--<h1 class="title">Competencias organizacionales y actitudinales</h1>-->
+                    <div class="alert alert-info" role="alert">
+                        La evaluación consta de los siguientes items:
+                      </div>
                     <div class="w-75 p-3">
-                        <label for="nameId" class="form-label">Trabajo en equipo<label>
+                        <label for="nameId" class="form-label"><span>1. </span>Trabajo en equipo<label>
                             <p class="text">Apoya y participa con agrado en las actividades de la compañia y el equipo de trabajo, generando un ambiente positivo y contribuyendo al logro de una meta común.</p>
                            
                             <div id="contenedor">
@@ -116,7 +120,7 @@
 
                     </div>
                     <div class="w-75 p-3">
-                        <label for="nameId" class="form-label">Innovación y actitud<label>
+                        <label for="nameId" class="form-label"><span>2. </span>Innovación y actitud<label>
                             <p class="text">Conservar una actitud positiva frente a los cambios en su rol y en la compañía, propone ideas y mejoras que generen beneficios para su trabajo y para la empresa.</p>
                             <div id="contenedor">
 
@@ -143,7 +147,7 @@
                     </div>
                     
                     <div class="w-75 p-3">
-                        <label for="nameId" class="form-label">Orientacion al logro<label>
+                        <label for="nameId" class="form-label"><span>3. </span>Orientacion al logro<label>
                             <p class="text">Se compromete con los objetivos y prioridades de la compañía, asumiendo las consecuencias de sus actos ante el incumplimiento de estos; hacer que las cosas pasen.</p>
                        
                             <div id="contenedor">
@@ -183,9 +187,9 @@
                         <br>
                         <br>
                 </div>
-                <h1 class="title">Conocimientos y habilidades</h1>
+                <!--<h1 class="title">Conocimientos y habilidades</h1>-->
                 <div class="w-75 p-3">
-                    <label for="nameId" class="form-label">Procedimientos de la empresa<label>
+                    <label for="nameId" class="form-label"><span>4. </span>Procedimientos de la empresa<label>
                         <p class="text">Conoce y aplica los procedimientos de la empresa, el resultado de su desempeño contribuye al cumplimiento de las metas de la compañía.</p>
                         
                         <div id="contenedor">
@@ -212,7 +216,7 @@
                         </div>
                     </div>
                     <div class="w-75 p-3">
-                        <label for="nameId" class="form-label">Responsabilidad laboral<label>
+                        <label for="nameId" class="form-label"><span>5. </span>Responsabilidad laboral<label>
                             <p class="text">Cumple las labores asignadas, realiza el trabajo con agilidad y precisión, controla la adecuada utilización de los implementos de la compañía y se muestra interesado en su labor.</p>
                             
                             <div id="contenedor">
@@ -245,10 +249,16 @@
                         <br>
                         <br> 
                         <br> 
+                        <br>
+                        <br>
+                        <br> 
+                        <br> 
+                        <br> 
+                        <br> 
                                            
                     </div>
                     <div class="w-75 p-3">
-                        <label for="nameId" class="form-label">Orientacion al servicio <label>
+                        <label for="nameId" class="form-label"><span>6. </span>Orientacion al servicio <label>
                             <p class="text">Atiende y responde las solicitudes del cliente interno y externo con calidad,oportunidad y amabilidad</p>
                        
                             <div id="contenedor">
@@ -274,6 +284,7 @@
                         </div>
                 </div>
                     <h1 class="title w-120 p-1">Líder</h1>
+                    <p>Este espacio es para evaluar a tu superior es importante considerar tanto sus habilidades de liderazgo como su impacto en el equipo y la organización. Observa su capacidad para comunicar claramente las metas, brindar dirección y apoyar el crecimiento profesional de los empleados. Valora su habilidad para motivar, resolver conflictos y fomentar un ambiente de trabajo positivo.</p>
                     <div id="contenedor" class="w-15 p-1">
                         <h6>Puntos fuertes</h6>
                         <div id="texto" contenteditable="true"></div>
@@ -281,7 +292,7 @@
                     <div id="contenedor" class="w-75 p-1">
                         <h6>Puntos a desarrollar</h6>
                         <div id="texto" contenteditable="true"></div>
-                    </div>    
+                    </div>  
                     <h1 class="title w-120 p-1">Trabajador</h1>
                     <div id="contenedor" class="w-75 p-1">
                         <h7>Puntos fuertes</h7>
@@ -296,6 +307,17 @@
                         <h7>Comentarios sobre el Feedback</h7>
                         <div id="texto" contenteditable="true"></div>
                     </div>
+                    <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
                 <div class="col-4">
                     <label for="nameId" class="form-label">Proxima reunión<label>
                     <input type="date" class="form-control" id="nameId">
@@ -311,6 +333,7 @@
             <br>
             <br>
             <br>
+            <img src="images/Puntaje.jpeg" class="img-fluid d-block" alt="Logo-BikeHouse">
             <br>
             <p class="creditos">© 2023 - Create By DavidB</p>
             </form>
@@ -326,15 +349,21 @@
 
     <script>
         const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
+        const toastLiveExample = document.getElementById('liveToast')
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
-}
+        if (toastTrigger) {
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+          toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+          })
+        }
+
+        var saludo;
+        saludo = "Hola, Bienvenido a mi Feedback - David Baron🤔";
+        console.log(saludo);
+
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetAlert.js"></script>
 </body>
 </html>
