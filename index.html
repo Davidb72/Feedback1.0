@@ -84,10 +84,9 @@
                         <label for="nameId" class="form-label"><span>1. </span>Trabajo en equipo<label>
                             <p class="text">Apoya y participa con agrado en las actividades de la compañia y el equipo de trabajo, generando un ambiente positivo y contribuyendo al logro de una meta común.</p>
                            
-                            <div id="contenedor">
-                                <h6 id="cpo"><span>%</span> De 1 al 15</h6>
-                                <div id="texto" contenteditable="true"></div>
-                            </div>
+                            <div>
+                                <input type="number" id="numero1" placeholder="De 1 al 15">
+                            </div>    
 
                             <div id="contenedor">
                                 <h6>Continuar haciendo</h6>
@@ -124,10 +123,9 @@
                             <p class="text">Conservar una actitud positiva frente a los cambios en su rol y en la compañía, propone ideas y mejoras que generen beneficios para su trabajo y para la empresa.</p>
                             <div id="contenedor">
 
-                                <div id="contenedor">
-                                    <h6 id="cpo"><span>%</span> De 1 al 15</h6>
-                                    <div id="texto" contenteditable="true"></div>
-                                </div>
+                                <div>
+                                    <input type="number" id="numero2" placeholder="De 1 al 15">
+                                </div>    
 
                                 <h6>Continuar haciendo</h6>
                                 <div id="texto" contenteditable="true"></div>
@@ -150,10 +148,9 @@
                         <label for="nameId" class="form-label"><span>3. </span>Orientacion al logro<label>
                             <p class="text">Se compromete con los objetivos y prioridades de la compañía, asumiendo las consecuencias de sus actos ante el incumplimiento de estos; hacer que las cosas pasen.</p>
                        
-                            <div id="contenedor">
-                                <h6 id="cpo"><span>%</span> De 1 al 20</h6>
-                                <div id="texto" contenteditable="true"></div>
-                            </div>
+                            <div>
+                                <input type="number" id="numero3" placeholder="De 1 al 20">
+                            </div>    
 
                         <div id="contenedor">
                             <h6>Continuar haciendo</h6>
@@ -192,10 +189,9 @@
                     <label for="nameId" class="form-label"><span>4. </span>Procedimientos de la empresa<label>
                         <p class="text">Conoce y aplica los procedimientos de la empresa, el resultado de su desempeño contribuye al cumplimiento de las metas de la compañía.</p>
                         
-                        <div id="contenedor">
-                            <h6 id="cpo"><span>%</span> De 1 al 20</h6>
-                            <div id="texto" contenteditable="true"></div>
-                        </div>
+                        <div>
+                            <input type="number" id="numero4" placeholder="De 1 al 20">
+                        </div>    
 
                         <div id="contenedor">
                             <h6>Continuar haciendo</h6>
@@ -219,10 +215,9 @@
                         <label for="nameId" class="form-label"><span>5. </span>Responsabilidad laboral<label>
                             <p class="text">Cumple las labores asignadas, realiza el trabajo con agilidad y precisión, controla la adecuada utilización de los implementos de la compañía y se muestra interesado en su labor.</p>
                             
-                            <div id="contenedor">
-                                <h6 id="cpo"><span>%</span> De 1 al 15</h6>
-                                <div id="texto" contenteditable="true"></div>
-                            </div>
+                            <div>
+                                <input type="number" id="numero5" placeholder="De 1 al 15">
+                            </div>    
 
                             <div id="contenedor">
                                 <h6>Continuar haciendo</h6>
@@ -261,10 +256,9 @@
                         <label for="nameId" class="form-label"><span>6. </span>Orientacion al servicio <label>
                             <p class="text">Atiende y responde las solicitudes del cliente interno y externo con calidad,oportunidad y amabilidad</p>
                        
-                            <div id="contenedor">
-                                <h6 id="cpo"><span>%</span> De 1 al 15</h6>
-                                <div id="texto" contenteditable="true"></div>
-                            </div>
+                            <div>
+                                <input type="number" id="numero6" placeholder="De 1 al 15">
+                            </div>    
 
                         <div id="contenedor">
                             <h6>Continuar haciendo</h6>
@@ -283,6 +277,11 @@
                             <div id="texto" contenteditable="true"></div>
                         </div>
                 </div>
+                <div>
+                    <button onclick="sumarNumeros()" type="button" class="btn btn-dark">Sumar</button>
+                </div>
+                <p><strong>Resultados de los porcentajes:</strong><span id="total"> 0</span></p>
+
                     <h1 class="title w-120 p-1">Líder</h1>
                     <p>Este espacio es para evaluar a tu superior es importante considerar tanto sus habilidades de liderazgo como su impacto en el equipo y la organización. Observa su capacidad para comunicar claramente las metas, brindar dirección y apoyar el crecimiento profesional de los empleados. Valora su habilidad para motivar, resolver conflictos y fomentar un ambiente de trabajo positivo.</p>
                     <div id="contenedor" class="w-15 p-1">
@@ -365,5 +364,22 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/sweetAlert.js"></script>
+    <script>
+        // Función para sumar los números ingresados
+        function sumarNumeros() {
+            var numero1 = parseFloat(document.getElementById("numero1").value) || 0;
+            var numero2 = parseFloat(document.getElementById("numero2").value) || 0;
+            var numero3 = parseFloat(document.getElementById("numero3").value) || 0;
+            var numero4 = parseFloat(document.getElementById("numero4").value) || 0;
+            var numero5 = parseFloat(document.getElementById("numero5").value) || 0;
+            var numero6 = parseFloat(document.getElementById("numero6").value) || 0;
+            
+            // Suma los valores
+            var sumaTotal = numero1 + numero2 + numero3 + numero4 + numero5 + numero6;
+            
+            // Actualiza el total en el elemento "total"
+            document.getElementById("total").textContent = sumaTotal;
+        }
+    </script>
 </body>
 </html>
